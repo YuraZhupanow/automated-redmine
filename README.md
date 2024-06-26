@@ -1,1 +1,1 @@
-# automated-redmine testing
+# automated-redmine
