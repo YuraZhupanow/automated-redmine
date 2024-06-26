@@ -13,7 +13,7 @@ __pycache__/
 lib/
 bin/
 include/
-.pyvenv.cfg
+pyvenv.cfg
 
 # pytest
 .cache/
