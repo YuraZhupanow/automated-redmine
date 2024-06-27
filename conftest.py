@@ -16,5 +16,6 @@ def driver(request):
     else:
         raise ValueError(f"Browser not supported: {browser}")
     driver.implicitly_wait(10)
+    driver.maximize_window()
     yield driver
     driver.quit()
