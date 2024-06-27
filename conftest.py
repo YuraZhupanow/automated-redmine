@@ -1,5 +1,6 @@
 import pytest
 from selenium import webdriver
+import logging
 
 
 def pytest_addoption(parser):
@@ -8,6 +9,7 @@ def pytest_addoption(parser):
 
 @pytest.fixture
 def driver(request):
+    logging.info("Starting browser")
     browser = request.config.getoption("--browser")
     if browser == "chrome":
         driver = webdriver.Chrome()
@@ -19,3 +21,4 @@ def driver(request):
     driver.maximize_window()
     yield driver
     driver.quit()
+    logging.info("Browser closed")
